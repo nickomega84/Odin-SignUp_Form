@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Vampire Wars';
+    src: url(fonts/Vampire\ Wars.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(./img/img.avif);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-size: cover; 
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+    padding: 20px;    
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.logo-container, .photo-credit {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container {
+    margin-top: 100px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container h1 {
+    font-size: 4rem;
+    font-family: 'Vampire Wars';
+    letter-spacing: 2px;
+}
+
+.photo-credit a {
+    color: white;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f9f9f9;
+}
+
+.introduction {
+    padding: 10px 50px 30px 50px;
+    margin-bottom: -10px;
+}
+
+.introduction, .action-section {
+    padding: 30px 50px;
+    margin-top: 15px;
+}
+
+.introduction p {
+    font-size: 1.2 rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.form-section {
+    background-color: aliceblue;
+    padding: 20px 55px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Vampire Wars', sans-serif;
+    font-size: 1.5rem;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    font-size: 0.8 rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #596D48;
+    box-shadow: 0 0 5px rgba(89, 109, 72, 0.3);
+}
+
+input.error-border {
+    border-color: #ff4d4d;
+} 
+
+.error-text {
+    color: #ff4d4d;
+    font-size: 0.7rem;   
+    margin-top: 5px;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 15px 40px;
+    border: 2px solid #596D48;
+    border-radius: 8px; 
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: black; 
+    color:  lightgreen;
+    border: 1px solid lightgreen;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+.action-section button {
+    font-size: 20px;
+}
+
+.action-section {
+    padding: 54px 50px 30px 50px;
+}
+
+.action-section p {
+    font-size: 1.1rem;
+}
+
+.action-section a {
+    color: #596d48;
+    text-decoration: none;
+    font-weight: bold;
+}
